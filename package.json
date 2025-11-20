@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"npm install -f --prefix backend && npm install -f --prefix client && npm run build --prefix client",
-    "start": "npm run dev --prefix backend"
+    "build": "npm install --prefix backend && npm install --legacy-peer-deps --prefix client && npm run build --prefix client",
+    "start": "npm start --prefix backend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix client\""
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
     "url": "https://github.com/santhoshkumar555/ai-chat/issues"
   },
   "homepage": "https://github.com/santhoshkumar555/ai-chat#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
 }

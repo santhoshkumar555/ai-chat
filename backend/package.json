@@ -4,8 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --env-file .env index.js",
-    "dev": "node index.js",
+    "start": "node index.js",
+    "dev": "nodemon --env-file .env index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,7 +16,6 @@
     "@clerk/clerk-sdk-node": "^5.1.6",
     "@google/genai": "^1.11.0",
     "@imagekit/react": "^5.0.1",
-    "chatgpt-clone-completed": "file:..",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^4.19.2",
