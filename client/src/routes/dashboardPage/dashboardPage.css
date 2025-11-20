@@ -3,8 +3,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-   scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 
   .texts {
     flex: 1;
@@ -61,6 +63,7 @@
       }
     }
   }
+
   .formContainer {
     margin-top: auto;
     width: 50%;
@@ -85,6 +88,7 @@
         outline: none;
         color: #ececec;
       }
+
       button {
         background-color: #605e68;
         border-radius: 50%;
@@ -103,7 +107,29 @@
       }
     }
   }
-}
-body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
+
+  @media screen and (max-width: 768px) {
+    .texts {
+      width: 100%;
+      gap: 20px;
+
+      .logo h1 {
+        font-size: 40px;
+      }
+
+      .options {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .formContainer {
+      width: 100%;
+    }
   }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, and Opera */
+}

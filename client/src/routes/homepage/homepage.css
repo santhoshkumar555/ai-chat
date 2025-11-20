@@ -29,6 +29,7 @@
         font-size: 64px;
       }
     }
+
     h3 {
       font-weight: 400;
       max-width: 70%;
@@ -37,6 +38,7 @@
         max-width: 100%;
       }
     }
+
     a {
       padding: 15px 25px;
       background-color: #217bfe;
@@ -51,6 +53,7 @@
       }
     }
   }
+
   .right {
     flex: 1;
     display: flex;
@@ -154,12 +157,23 @@
       font-size: 10px;
     }
   }
+
+  @media screen and (max-width: 640px) {
+    .left h1 {
+      font-size: 36px;
+    }
+
+    .left h3 {
+      font-size: 16px;
+    }
+  }
 }
 
 @keyframes rotateOrbital {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(60deg);
   }
@@ -169,6 +183,7 @@
   0% {
     transform: scale(1) rotate(0deg);
   }
+
   100% {
     transform: scale(1.1) rotate(-5deg);
   }
@@ -178,6 +193,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
