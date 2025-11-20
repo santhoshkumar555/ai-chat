@@ -35,16 +35,12 @@ const NewPrompt = ({ data }) => {
 
   // --- Backend update mutation ---
   const mutation = useMutation({
-    mutationFn: () =>
+    mutationFn: (payload) =>
       fetch(`${import.meta.env.VITE_API_URL}/api/chats/${data._id}`, {
         method: "PUT",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question: question.length ? question : undefined,
-          answer,
-          img: img.dbData?.filePath || undefined,
-        }),
+        body: JSON.stringify(payload),
       }).then((res) => res.json()),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["chat", data._id] });
@@ -93,7 +89,11 @@ const NewPrompt = ({ data }) => {
       }
 
       // Save to backend
-      mutation.mutate();
+      mutation.mutate({
+        question: isInitial ? undefined : text,
+        answer: accumulatedText,
+        img: img.dbData?.filePath || undefined,
+      });
     } catch (err) {
       console.log("Chat Error:", err);
     }
