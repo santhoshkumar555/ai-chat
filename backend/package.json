@@ -18,6 +18,7 @@
     "@imagekit/react": "^5.0.1",
     "chatgpt-clone-completed": "file:..",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^4.19.2",
     "imagekit": "^5.2.0",
     "mongodb": "^6.18.0",
