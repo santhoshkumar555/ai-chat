@@ -30,7 +30,7 @@
       display: block;
       position: absolute;
       top: 15px;
-      left: 0;
+      left: 20px;
       z-index: 999;
       background-color: #2c2937;
       padding: 10px;
@@ -51,7 +51,7 @@
       height: 100vh;
       background-color: #0e0c16;
       z-index: 998;
-      padding: 20px;
+      padding: 60px 20px 20px 20px;
       transition: all 0.3s ease-in-out;
       display: flex;
       flex-direction: column;
@@ -63,6 +63,7 @@
 
     .content {
       flex: 1;
+      overflow: hidden;
     }
   }
 }
