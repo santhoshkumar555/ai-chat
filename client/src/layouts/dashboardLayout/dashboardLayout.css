@@ -3,6 +3,7 @@
   gap: 50px;
   padding-top: 20px;
   height: 100%;
+  position: relative;
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
@@ -27,9 +28,9 @@
 
     .menuToggle {
       display: block;
-      position: fixed;
-      top: 20px;
-      left: 20px;
+      position: absolute;
+      top: 15px;
+      left: 0;
       z-index: 999;
       background-color: #2c2937;
       padding: 10px;
@@ -61,7 +62,7 @@
     }
 
     .content {
-      flex: unset;
+      flex: 1;
     }
   }
 }
