@@ -17,12 +17,47 @@
     background-color: #12101b;
   }
 
+  .menuToggle {
+    display: none;
+  }
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
     gap: 20px;
 
+    .menuToggle {
+      display: block;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      background-color: #2c2937;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
     .menu {
-      flex: unset;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 80%;
+      height: 100vh;
+      background-color: #0e0c16;
+      z-index: 998;
+      padding: 20px;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+
+      &.active {
+        left: 0;
+      }
     }
 
     .content {
